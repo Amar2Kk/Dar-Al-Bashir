@@ -18,7 +18,7 @@ const SizesPage: React.FC<SizesPageProps> = async ({ params }) => {
         id: item.id,
         name: item.name,
         value: item.value,
-        createdAt: format(item.createdAt, "MMM do,yyyy"),
+        createdAt: format(item.createdAt, "MMM do, yyyy"),
     }));
     return (
         <div className="flex-col">
