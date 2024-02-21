@@ -5,11 +5,11 @@ import { ProductClient } from "./components/client";
 import { ProductColumn } from "./components/columns";
 import { formatter } from "@/lib/utils";
 
-interface ProductPageProps {
+interface NewProductPageProps {
     params: { storeId: string };
 }
 
-const ProductPage: React.FC<ProductPageProps> = async ({ params }) => {
+const NewProductPage: React.FC<NewProductPageProps> = async ({ params }) => {
     const products = await prismaDB.product.findMany({
         where: { storeId: params.storeId },
         include: {
@@ -40,4 +40,4 @@ const ProductPage: React.FC<ProductPageProps> = async ({ params }) => {
     );
 };
 
-export default ProductPage;
+export default NewProductPage;
