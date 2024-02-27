@@ -29,7 +29,7 @@ interface BillboardFormProps {
     initialData: Billboard | null;
 }
 const formSchema = z.object({
-    label: z.string().min(2),
+    label: z.string().min(1),
     imageUrl: z.string().min(1),
 });
 
